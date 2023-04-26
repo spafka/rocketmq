@@ -47,6 +47,8 @@ public class BrokerStartup {
     public static final SystemConfigFileHelper CONFIG_FILE_HELPER = new SystemConfigFileHelper();
 
     public static void main(String[] args) {
+        System.setProperty("rocketmq.namesrv.addr", "localhost:9876");
+
         start(createBrokerController(args));
     }
 

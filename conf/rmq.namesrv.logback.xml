@@ -26,14 +26,11 @@
         <!-- encoder 默认配置为PatternLayoutEncoder -->
         <!--定义控制台输出格式-->
         <encoder>
-            <pattern>%red(%d{yyyy-MM-dd HH:mm:ss}) %green([%thread]) %highlight(%-5level) %boldMagenta(%logger) - %cyan(%msg%n)</pattern>
+            <pattern>%d [%thread] %-5level %logger{36} [%file : %line] - %msg%n</pattern>
         </encoder>
     </appender>
 
     <root level="INFO">
         <appender-ref ref="stdout"/>
     </root>
-
-    <logger name="RocketmqPop" level="WARN"></logger>
-    <logger name="RocketmqWaterMark" level="WARN"></logger>
 </configuration>
